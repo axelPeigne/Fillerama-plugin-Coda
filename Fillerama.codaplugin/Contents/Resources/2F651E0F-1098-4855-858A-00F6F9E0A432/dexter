@@ -1,0 +1,27 @@
+#!/usr/bin/php
+<?php
+
+/**
+ * Fillerama dexter
+ *
+ * Retrieves text from the Fillerama API (http://chrisvalleskey.com/fillerama/). This plugin is inspired by the great job of Seth Lilly <http://sethlilly.com> with the Hipster Ipsum plugin.
+ *
+ * @author     Axel Peigné <axel.peigne@gmail.com>
+ * @copyright  2013 Axel Peigné
+ * @license    http://www.gnu.org/copyleft/gpl.html  GPL v3
+ * @version    0.1
+ */
+
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, "http://api.chrisvalleskey.com/fillerama/get.php?count=1&format=json&show=dexter");
+curl_setopt($ch, CURLOPT_HEADER, 0);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+$res = curl_exec($ch);
+error_log($res,0);
+curl_close($ch);
+
+$ret = json_decode($res, true);
+
+echo "<p>".$ret['db'][0]['quote']."<br /><i>".$ret['db'][0]['source']."</i></p>";
+
+?>

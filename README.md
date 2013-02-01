@@ -3,7 +3,7 @@ Fillerama Plugin for Coda
 
 Introduction
 ---
-Fillerama Plugin for Coda is a nice plugin that you can add to your [Coda](http://panic.com/coda/ "Coda") app in order to simply add loremipsum-like text, but with awesome quotes from Star Wars, Simpsons, Dexter …
+Fillerama Plugin for Coda is a nice plugin that you can add to your [Coda](http://panic.com/coda/ "Coda") app in order to simply add loremipsum-like text, but with awesome quotes from Star Wars, The simpsons, Dexter …
 
 Installation
 ---
